@@ -57,7 +57,7 @@ shortenForm.addEventListener("submit", async function (event) {
     result.replaceChildren();
 
     try {
-        const response = await fetch("http://localhost:3000/api/shorten", {
+        const response = await fetch("https://linklite-shortenit.onrender.com/api/shorten", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -71,7 +71,7 @@ shortenForm.addEventListener("submit", async function (event) {
             throw new Error(data.message || "Could not shorten this URL.");
         }
 
-        const shortUrl = `http://localhost:3000/${data.shortCode}`;
+        const shortUrl = `https://linklite-shortenit.onrender.com/${data.shortCode}`;
 
         // Build the result safely using DOM elements
         const resultCard = document.createElement("div");
