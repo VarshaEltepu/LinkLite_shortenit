@@ -1,0 +1,120 @@
+
+/* 1. Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f3ff;
+    color: #1f2937;
+}
+
+/* 2. Navigation / header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    border-bottom: 5px solid #e5e7eb;
+}
+
+header h1 {
+    margin: 0;
+    color: #6d28d9;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+/* 3. Main content */
+main {
+    width: 90%;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 70px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+main h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+main p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* 4. URL input */
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+/* 5. Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background: #6d28d9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #5b21b6;
+}
+
+/* 6. Result area */
+#result {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* 7. Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* 8. Mobile-friendly layout */
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main {
+        margin: 50px auto;
+        padding: 25px;
+    }
+
+    main h2 {
+        font-size: 26px;
+    }
+}
