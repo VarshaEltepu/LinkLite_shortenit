@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>LinkLite — Simple URL Shortener</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="/" class="brand">LinkLite<span>.</span></a>
+
+        <button id="themeToggle" class="theme-toggle"
+                type="button" aria-label="Switch to dark mode">
+            Dark mode
+        </button>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">SIMPLE. QUICK. SHAREABLE.</p>
+            <h1>Short links.<br>More possibilities.</h1>
+            <p class="hero-description">
+                Turn long URLs into short links that are easy to share.
+            </p>
+        </section>
+
+        <section class="shortener-card" aria-labelledby="shortenerTitle">
+            <h2 id="shortenerTitle">Create a short link</h2>
+            <p class="section-description">
+                Paste your long URL below to get started.
+            </p>
+
+            <form id="shortenForm">
+                <label for="longUrl">Destination URL</label>
+
+                <div class="input-row">
+                    <input
+                        type="url"
+                        id="longUrl"
+                        name="longUrl"
+                        placeholder="https://example.com/your-long-link"
+                        autocomplete="url"
+                        required
+                    >
+                    <button id="shortenBtn" type="submit">
+                        Shorten URL
+                    </button>
+                </div>
+            </form>
+
+            <p id="statusMessage" class="status-message"
+               role="status" aria-live="polite"></p>
+
+            <section id="result" class="result" aria-live="polite"
+                     aria-label="Short link result"></section>
+        </section>
+
+        <section class="history-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Recent links</h2>
+                    <p class="section-description">
+                        Your recently shortened URLs will appear here.
+                    </p>
+                </div>
+                <button id="clearHistoryBtn" class="text-button"
+                        type="button">
+                    Clear history
+                </button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <p class="empty-history">
+                    No links yet. Create your first short link above.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Made with care using HTML, CSS and JavaScript.</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
